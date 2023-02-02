@@ -4,12 +4,8 @@ import axios from 'axios'
 import AllWorkers from './components/AllWorker.jsx'
 import AddWorkers from './components/AddWorkers.jsx'
 import Details from './components/Details.jsx'
-import UpdateWorker from './components/updateWorker.jsx'
 const App = () => {
   const [items, setItems] = useState([])
-  const [image,setImage]=useState("")
-  const [name,setName]=useState("")
-  const [jobTitle,setJobTitle]=useState("")
   const [view,setView]=useState("allWorker")
   const [serchname,setSerchname]=useState("")
   const[refech,setRefech]=useState(false)
@@ -29,8 +25,6 @@ const App = () => {
       return <AddWorkers/>
     }else if (view ==="detels"){
       return <Details items={items}  />
-    }else if (view ==="upd"){
-      return <UpdateWorker items={items} refech={refech} />
     }
   }
 
